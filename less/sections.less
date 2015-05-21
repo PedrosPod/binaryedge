@@ -52,6 +52,7 @@ section
         {
             background-image: url('../img/bg/landing-bg.jpg');
         }
+
     }
     &[data-area="about-us"]
     {
@@ -114,7 +115,7 @@ section
                     right: 0; top:50%;
                     .translateY(-50%);
                     width: 200%;
-                    fill: #000;
+                    fill: @gray-dark;
 
                 }
             }
@@ -162,7 +163,7 @@ section
                     left: -1px; top:50%;
                     .translateY(-50%);
                     width: 200%;
-                    fill: white;
+                    fill: @gray-lighter;
 
                 }
             }
@@ -272,9 +273,9 @@ section
                 top: 0; right: 0; bottom: 0; left: 0;
                 svg
                 {
-                    width: 150%;
+                    width: 200%;
                     position: absolute;
-                    right: 0; top :-15%;
+                    right: -10%; top :-15%;
                     fill: @red;
                     .opacity(.85);
 
@@ -506,6 +507,8 @@ section
     list-style-type: none;
     > li
     {
+        max-width: 200px;
+        margin: 0 100px 0 0;
         display: block;
         float: left;
         position: relative;
