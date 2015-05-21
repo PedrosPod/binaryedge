@@ -7388,6 +7388,31 @@ section .section-bg {
 section[data-area="landing-page"] .section-bg {
   background-image: url('../img/bg/landing-bg.jpg');
 }
+section[data-area="landing-page"] .content {
+  z-index: 1;
+}
+section[data-area="landing-page"] .bg-context {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+section[data-area="landing-page"] .bg-context svg {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 80%;
+}
+section[data-area="landing-page"] .bg-context.inverted svg {
+  left: 80%;
+  right: auto;
+}
 section[data-area="about-us"] .section-bg {
   background-image: url('../img/bg/about-bg.jpg');
   background-size: cover;
@@ -7512,11 +7537,11 @@ section[data-area="services"] #slide1 .slide + .slide {
   z-index: 2;
 }
 section[data-area="services"] #slide1 .left-content {
-  width: 60%;
+  width: 80%;
   top: 0;
   bottom: 0;
   left: 0;
-  padding-left: 15%;
+  padding-left: 10%;
 }
 section[data-area="services"] #slide1 .left-content .content {
   width: 100%;
@@ -7585,7 +7610,7 @@ section[data-area="services"] #slide1 .right-content {
   height: 100%;
 }
 section[data-area="services"] #slide1 .right-content .context-bg {
-  height: 100%;
+  width: 100%;
   position: absolute;
   top: 0;
   right: 0;
@@ -7599,7 +7624,7 @@ section[data-area="services"] #slide1 .right-content .context-bg {
 }
 section[data-area="services"] #slide1 .right-content .context-bg svg {
   position: absolute;
-  left: 0;
+  left: 50%;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
