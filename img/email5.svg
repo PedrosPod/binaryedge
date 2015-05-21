@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="15px" viewBox="0 0 20 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>email5</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Desktop-HD---TEAM-Copy" sketch:type="MSArtboardGroup" transform="translate(-840.000000, -780.000000)" fill="#9B9B9B">
+            <g id="email5" sketch:type="MSLayerGroup" transform="translate(840.000000, 780.000000)">
+                <g id="Group" sketch:type="MSShapeGroup">
+                    <path d="M10,10 L7.52571429,7.83428571 L0.451428571,13.8985714 C0.708571429,14.1371429 1.05571429,14.2857143 1.43857143,14.2857143 L18.5614286,14.2857143 C18.9428571,14.2857143 19.2885714,14.1371429 19.5442857,13.8985714 L12.4742857,7.83428571 L10,10 L10,10 Z" id="Shape"></path>
+                    <path d="M19.5485714,0.387142857 C19.2914286,0.147142857 18.9457143,0 18.5614286,0 L1.43857143,0 C1.05714286,0 0.711428571,0.148571429 0.454285714,0.39 L10,8.57142857 L19.5485714,0.387142857 L19.5485714,0.387142857 Z" id="Shape"></path>
+                    <path d="M0,1.25428571 L0,13.1228571 L6.90428571,7.25571429 L0,1.25428571 Z" id="Shape"></path>
+                    <path d="M13.0957143,7.25571429 L20,13.1228571 L20,1.25 L13.0957143,7.25571429 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
