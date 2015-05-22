@@ -48,6 +48,21 @@ section {
   &[data-area="landing-page"] {
     .section-bg {
       background-image: url('../img/bg/landing-bg.jpg');
+     &:before
+     {
+       // box
+       width: 100%; height: 100%;
+       display: block;
+       // position
+       position: absolute;
+       top: 0; right: 0; bottom: 0; left: 0;
+       z-index: 2;
+       // style
+       .background-image(linear-gradient(to bottom, rgba(0,0,0,.25) 0%,rgba(0,0,0,.85) 100%));
+       .opacity(.35);
+       // content
+       content: '';
+     }
     }
     .content
     {
@@ -67,13 +82,13 @@ section {
         // position
         position: absolute;
         top: 50%; .translateY(-50%);
-        right: 80%;
+        right: 90%;
       }
       &.inverted
       {
         svg
         {
-          left: 80%;
+          left: 90%;
           right: auto;
         }
 
@@ -398,6 +413,22 @@ section {
       height: 100px;
       fill: white;
     }
+  }
+
+  h6
+  {
+    display: block;
+    height: 40px;
+    width: auto;
+    margin: 30px auto 0;
+    padding: 0px 30px;
+    
+    border: 2px solid white;
+    position: relative;
+    line-height: 38px;
+    left: 50%;
+    .translateX(-50%);
+
   }
 
 }
