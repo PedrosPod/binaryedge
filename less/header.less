@@ -9,130 +9,85 @@ header
     background: rgba(255,255,255,.0);
     .transition-normal();
 
-    &.is-collapsed
+    .container
     {
-        .translateY(-50px);
-        background: rgba(255, 255, 255, .85);
+        position: relative;
+        height: 100%;
+    }
+
+
+
+    .logo-wrapper
+    {
+        float: left;
+        margin-left: 30px;
+        position: relative;
+        height: 100%;
         .logo
         {
-            .translateY(0px);
+            // box
+            height: @header-h / 1.5;
+            // position
+            position: absolute;
+            left: 0;
+            top: 50%;
+            .translateY(-50%);
             svg
             {
-                margin-top: -2px;
-                height: 40px;
-                fill: @red;
+                height: 100%;
+                fill: white;
             }
         }
         .lettering
         {
-            height: 15px;
-            left: 45px;
-            top: 50%; margin-top: -8px;
+            // box
+            height: 18px;
+            // position
+            position: absolute;
+            top: 50%; margin-top: -9px;
+            left: 70px;
             svg
             {
-                fill: darkgray;
+                height: 100%;
+                fill: white;
             }
         }
-        .header-container
-        {
-
-        }
-        .main-nav
-        {
-            li
-            {
-
-                a { color: #808080 }
-
-                &.active
-                {
-                    .box-shadow(~"inset 0 -5px 0 #F44336");
-                    a { color: #000 }
-                }
-            }
-        }
-
     }
-    .header-container
-    {
-        position: absolute;
-        bottom: 0; left: 10%; right: 10%;
-        height: @header-h;
-        .translateY(0);
 
-
-    }
-    .logo
-    {
-        // box
-        height: @header-h / 1.5;
-        // position
-        position: absolute;
-        left: 0; bottom: 0;
-        //top: 50%;
-        //margin-top: ( @header-h / 1.5) / 2  * -1;
-        .translateY(0);
-        svg
-        {
-            height: @header-h / 1.5;
-            fill: white;
-        }
-    }
-    .lettering
-    {
-        // box
-        height: 18px;
-        // position
-        position: absolute;
-        top: 50%;
-        left: 70px;
-        svg
-        {
-            height: 100%;
-            fill: white;
-        }
-    }
     .main-nav
     {
+        display: block;
+        padding: 0; margin: 0;
         // position
-        position: absolute;
-        right: 0; bottom :0;
+        float: right;
+        position: relative;
+        //margin-right: 30px;
+        top: 50%; .translateY(-50%);
         // style
-
-
-        > ul
+        list-style: none;
+        > li
         {
             // box
-            padding: 0; margin: 0;
-            // style
-            list-style: none;
-            > li
-            {
-                // box
-                display: inline-block;
-                padding: 15px 15px;
-                margin-right: 15px;
-                .transition-normal();
-                &.active
-                {
-                    .box-shadow(~"inset 0 -3px 0 white");
-                    a
-                    {
-                        color: white;
+            display: block;
+            height: @header-h;
+            float: left;
+            padding: 30px 30px 0px;
+            .transition-normal();
 
-                    }
-                }
-            }
             a
             {
                 // box
                 display: block;
+                // position
+                position: relative;
+                // style
+                .transition-normal();
                 // type
                 text-decoration: none;
                 text-transform: uppercase;
-                font-weight: 500;
+                font-weight: normal;
                 color: white;
-                font-size: 13px;
+                font-size: 14px;
                 font-family: @font-headings;
                 color: #ccc;
                 &:hover
@@ -140,7 +95,128 @@ header
                     color: white;
                 }
             }
+            &.active
+            {
+                .box-shadow(~"inset 0 -5px 0 white");
+                a
+                {
+                    color: white;
 
+                }
+            }
         }
     }
+
+    &.is-collapsed
+    {
+        height: @header-h;
+        background: rgba(255, 255, 255,1);
+        .box-shadow(~"0 1px 2px rgba(0,0,0,.24)");
+        .logo-wrapper
+        {
+            svg
+            {
+                fill: @gray !important;
+            }
+
+            .logo
+            {
+                height: @header-h / 2;
+            }
+            .lettering
+            {
+                height: 14px;
+                left: 40px;
+            }
+        }
+        .main-nav
+        {
+            > li
+            {
+                height: @header-h;
+                padding-top: 30px;
+                .box-shadow(~"inset 0 -3px 0 rgba(0,0,0,.1)");
+                a
+                {
+                    color: @gray;
+                }
+                &.active
+                {
+                    .box-shadow(~"inset 0 -5px 0 @{red}");
+                    a { color: @red }
+                }
+            }
+        }
+
+    }
+
+    @media @mobile
+    {
+        .logo-wrapper
+        {
+          margin-left: 0;
+        }
+        .main-nav
+        {  display: none;  }
+
+    }
+}
+
+// Mobile stuff
+.menu-trigger
+{
+    width: 45px; height: 45px;
+    display: none;
+
+    position: absolute;
+    right: 15px; top: 15px;
+
+    border: 0;
+
+
+}
+
+.mobile-nav
+{
+  display: none;
+  padding: 0; margin: 0;
+  width: 75%;
+  height: 360px;
+  position: fixed;
+  right: 0; bottom: 0;
+  z-index: 9999;
+  background: @gray-darker;
+  list-style: none;
+  > li
+  {
+    width: 100%;
+    float: left;
+
+    > a
+    {
+      width: 100%;
+      height: 60px;
+      padding: 0 30px 0 60px;
+      display: block;
+
+      font-size: 12px;
+      text-align: left;
+      line-height: 60px;
+      font-family: @font-headings;
+      font-weight: 600;
+      color: white;
+      text-transform: uppercase;
+
+      border-bottom: 1px dashed rgba(0,0,0,.1);
+      
+    }
+    &.active
+    {
+      > a
+      {
+        .box-shadow(~"inset 5px 0 0 @{red}");
+        color: @red;
+      }
+    }
+  }
 }

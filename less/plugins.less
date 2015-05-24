@@ -96,16 +96,20 @@ html.fp-enabled,
     z-index: 100;
     margin-top: -32px;
     top: 50%;
-
     opacity: 1;
     -webkit-transform: translate3d(0,0,0);
+    
+    @media @mobile
+    {
+        display: none;
+    }
 }
 #fp-nav.right {
-    right: 10%;
-    margin-right: -15px;
+    right: 50px;
+    
 }
 #fp-nav.left {
-    left: 10%;
+    left: 50px;
 }
 .fp-slidesNav{
     position: absolute;
@@ -114,7 +118,17 @@ html.fp-enabled,
     opacity: 1;
 }
 .fp-slidesNav.bottom {
-    bottom: 17px;
+    top: 100%;
+    .translate3d(0, -100px, 0);
+    a.active
+    {
+        span { background: #000; border-color: #000 }
+
+    }
+    a
+    {
+
+    }
 }
 .fp-slidesNav.top {
     top: 17px;

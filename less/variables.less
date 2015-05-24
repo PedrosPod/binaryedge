@@ -52,7 +52,7 @@
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
 @font-default: "Source Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-headings:  "Varela Round",  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-headings:  "Roboto",  "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 @font-size-base:          14px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
@@ -867,3 +867,23 @@
 @hr-border:                   @gray-lighter;
 
 
+// MEDIA STUFF
+// Breakpoints
+@highdensity: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+~"only screen and (min-device-pixel-ratio: 1.5)";
+
+@mobile-xs:      ~"only screen and (max-width: 360px)";
+@mobile-xs-landscape: ~"only screen and (min-width: 361px)";
+@mobile-s:      ~"only screen and (max-width: 480px)";
+@mobile-s-landscape: ~"only screen and (min-width: 481px)";
+
+@mobile:      ~"only screen and (max-width: 763px)";
+@mobile-landscape:  ~"only screen and (max-width: 763px) and (orientation: landscape)";
+
+@tablet:      ~"only screen and (min-width: 768px) and (max-width: 1024px)";
+@tablet-portrait:      ~"only screen and (min-width: 1024px) and (max-width: 768px)";
+
+@desktop:     ~"only screen and (min-width: 950px) and (max-width: 1128px)";
+@desktop-xl:  ~"only screen and (min-width: 1080px)";
