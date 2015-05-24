@@ -239,12 +239,47 @@ section {
         }
       }
 
+      @media @mobile
+      {
+        width: 100%;
+        bottom: auto;
+        height: 40%;
+
+        float: left;
+        .content
+        {
+          width: 100%;
+          height: 100%;
+          padding: 60px 30px 0 100px;
+
+          position: relative;
+          top: auto; left: auto;
+          .translate3d(0,0,0);
+
+
+          > p
+          {
+            width: 100%;
+            text-align: left;
+            position: relative;
+            top: 50%;
+            .translateY(-50%);
+          }
+          .small-logo
+          {
+            position: absolute;
+            left: 30px; top: 50%;
+            .translateY(-5px);
+          }
+        }
+      }
+
     }
     .right-content {
       top: 0;
       bottom: 0;
       right: 0;
-      width: 50%;
+      width: 70%;
       .content {
         width: 50%;
         // position
@@ -270,7 +305,43 @@ section {
           font-weight: 400;
           font-size: 16px;
           color: #555;
+          
 
+        }
+      }
+      @media @mobile
+      {
+        width: 100%;
+        height: 60%;
+        top: auto;
+
+        .content
+        {
+          width: 100%;
+          height: 100%;
+          padding: 60px 50px 30px;
+          position: relative;
+          top: auto; left: auto;
+          .translate3d(0,0,0,);
+
+          > h2
+          {
+            font-size: 18px;
+            padding: 6px;
+          }
+
+          > p
+          {
+            font-size: 16px;
+            color: @gray-dark;
+            margin-bottom: 10px;
+            
+            &:nth-child(3)
+            {
+              display: none;
+            }
+
+          }
         }
       }
     }
@@ -303,15 +374,44 @@ section {
           .opacity(.9);
         }
       }
+
+      @media @mobile
+      {
+
+        svg
+        {
+          width: 150%;
+          top: auto;
+          bottom: 0;
+          left: 50%;
+          right: auto;
+          .translate3d(-50%,20%,0);
+        }
+        &.inverse
+        {
+          svg
+          {
+            width: 150%;
+
+            top: 0;
+            left: 50%;
+            right: auto;
+            .translate3d(-50%,-45%,0);
+          }
+        }
+      }
+
     }
   }
-  &[data-area="services"] {
+  &[data-area="services"]
+  {
     .slide {
       background: @gray-darker;
     }
     #slide1 {
 
-      .slide + .slide {
+      .slide + .slide
+      {
         z-index: 2;
       }
 
@@ -327,7 +427,8 @@ section {
             top:-50%; left: 0%;
             .translate3d(0%, -25%, 0);
           }
-          p {
+          p
+          {
             width: 70%;
             position: relative;
             left: 0;
@@ -376,6 +477,37 @@ section {
       .section-bg {
         background-image: url('../img/bg/services-bg.jpg');
         background-size: cover;
+      }
+
+      @media @mobile
+      {
+        .services-entrance
+        {
+          padding: 30px;
+          h2
+          {
+            left: 30px;
+            font-size: 18px;
+            padding: 10px;
+          }
+          p
+          {
+            width: 100%;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.6;
+
+          }
+        }
+        .context-bg
+        {
+          svg
+          {
+            width: 200%;
+            top: 100%;
+            .translate3d(-50%, -25%, 0);
+          }
+        }
       }
     }
     #slide2 {
@@ -474,6 +606,54 @@ section {
           fill: @red;
           .opacity(.85);
 
+        }
+      }
+
+      @media @mobile
+      {
+          .content
+          {
+            width: 100%;
+
+            h2
+            {
+              width: auto;
+              left: 50%;
+              top: 95px;
+              .translate3d(-50%,0,0);
+              font-size: 20px;
+            }
+          }
+        .team-members
+        {
+          width: 100%;
+          display: block;
+          
+          .translate3d(-50%, -20%, 0);
+          > li
+          {
+            width: 100%;
+            margin-bottom: 50px;
+            img
+            {
+              width: 100px;
+              height: 100px;
+            }
+            .position
+            {
+              margin-top: 15px;
+            }
+          }
+        }
+        .context-bg
+        {
+          svg
+          {
+            width: 160%;
+            right: auto;
+            left: 50%;
+            .translate3d(-50%, -25%, 0);
+          }
         }
       }
     }
@@ -641,6 +821,23 @@ section {
         display: inline-block;
         margin-left: 15px;
       }
+    }
+  }
+
+  @media @mobile
+  {
+
+    width: 330px;
+   margin: 50px auto 0;
+
+
+    .header
+    {
+
+    }
+    .body
+    {
+
     }
   }
 }
