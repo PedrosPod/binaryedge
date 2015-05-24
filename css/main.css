@@ -7730,7 +7730,7 @@ section[data-area="about-us"] .right-content .content > p {
   section[data-area="about-us"] .right-content .content {
     width: 100%;
     height: 100%;
-    padding: 115px 50px 30px;
+    padding: 110px 50px 30px;
     position: relative;
     top: auto;
     left: auto;
@@ -7795,17 +7795,17 @@ section[data-area="about-us"] .context-bg.inverse svg {
     display: block;
   }
   section[data-area="about-us"] .context-bg svg {
-    width: 180%;
+    width: 200%;
     top: auto;
     bottom: auto;
     top: 0;
     left: 50%;
     right: auto;
-    -webkit-transform: translate3d(-50%, 0%, 0);
-    -moz-transform: translate3d(-50%, 0%, 0);
-    -o-transform: translate3d(-50%, 0%, 0);
-    -ms-transform: translate3d(-50%, 0%, 0);
-    transform: translate3d(-50%, 0%, 0);
+    -webkit-transform: translate3d(-50%, 10%, 0);
+    -moz-transform: translate3d(-50%, 10%, 0);
+    -o-transform: translate3d(-50%, 10%, 0);
+    -ms-transform: translate3d(-50%, 10%, 0);
+    transform: translate3d(-50%, 10%, 0);
   }
   section[data-area="about-us"] .context-bg.inverse {
     display: none;
@@ -7911,9 +7911,10 @@ section[data-area="services"] #slide1 .section-bg {
 }
 @media only screen and (max-width: 763px) {
   section[data-area="services"] #slide1 .services-entrance {
-    padding: 30px;
+    padding: 60px 30px;
   }
   section[data-area="services"] #slide1 .services-entrance h2 {
+    top: 0;
     left: 30px;
     font-size: 18px;
     padding: 10px;
@@ -8040,8 +8041,9 @@ section[data-area="team"] .left-content .context-bg svg {
   }
   section[data-area="team"] .left-content .content h2 {
     width: auto;
+    top: auto;
     left: 50%;
-    top: 95px;
+    bottom: 30px;
     -webkit-transform: translate3d(-50%, 0, 0);
     -moz-transform: translate3d(-50%, 0, 0);
     -o-transform: translate3d(-50%, 0, 0);
@@ -8052,11 +8054,11 @@ section[data-area="team"] .left-content .context-bg svg {
   section[data-area="team"] .left-content .team-members {
     width: 100%;
     display: block;
-    -webkit-transform: translate3d(-50%, -20%, 0);
-    -moz-transform: translate3d(-50%, -20%, 0);
-    -o-transform: translate3d(-50%, -20%, 0);
-    -ms-transform: translate3d(-50%, -20%, 0);
-    transform: translate3d(-50%, -20%, 0);
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -moz-transform: translate3d(-50%, -50%, 0);
+    -o-transform: translate3d(-50%, -50%, 0);
+    -ms-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
   }
   section[data-area="team"] .left-content .team-members > li {
     width: 100%;
@@ -8070,14 +8072,14 @@ section[data-area="team"] .left-content .context-bg svg {
     margin-top: 15px;
   }
   section[data-area="team"] .left-content .context-bg svg {
-    width: 160%;
+    width: 200%;
     right: auto;
     left: 50%;
-    -webkit-transform: translate3d(-50%, -25%, 0);
-    -moz-transform: translate3d(-50%, -25%, 0);
-    -o-transform: translate3d(-50%, -25%, 0);
-    -ms-transform: translate3d(-50%, -25%, 0);
-    transform: translate3d(-50%, -25%, 0);
+    -webkit-transform: translate3d(-50%, -40%, 0);
+    -moz-transform: translate3d(-50%, -40%, 0);
+    -o-transform: translate3d(-50%, -40%, 0);
+    -ms-transform: translate3d(-50%, -40%, 0);
+    transform: translate3d(-50%, -40%, 0);
   }
 }
 section[data-area="team"] .section-bg {
