@@ -7647,6 +7647,7 @@ section[data-area="about-us"] .left-content .content .small-logo svg {
 }
 @media only screen and (max-width: 763px) {
   section[data-area="about-us"] .left-content {
+    display: none;
     width: 100%;
     bottom: auto;
     height: 40%;
@@ -7723,13 +7724,13 @@ section[data-area="about-us"] .right-content .content > p {
 @media only screen and (max-width: 763px) {
   section[data-area="about-us"] .right-content {
     width: 100%;
-    height: 60%;
+    height: 100%;
     top: auto;
   }
   section[data-area="about-us"] .right-content .content {
     width: 100%;
     height: 100%;
-    padding: 60px 50px 30px;
+    padding: 115px 50px 30px;
     position: relative;
     top: auto;
     left: auto;
@@ -7747,9 +7748,6 @@ section[data-area="about-us"] .right-content .content > p {
     font-size: 16px;
     color: #333333;
     margin-bottom: 10px;
-  }
-  section[data-area="about-us"] .right-content .content > p:nth-child(3) {
-    display: none;
   }
 }
 section[data-area="about-us"] .context-bg {
@@ -7793,17 +7791,24 @@ section[data-area="about-us"] .context-bg.inverse svg {
   opacity: 0.9;
 }
 @media only screen and (max-width: 763px) {
+  section[data-area="about-us"] .context-bg {
+    display: block;
+  }
   section[data-area="about-us"] .context-bg svg {
-    width: 150%;
+    width: 180%;
     top: auto;
-    bottom: 0;
+    bottom: auto;
+    top: 0;
     left: 50%;
     right: auto;
-    -webkit-transform: translate3d(-50%, 20%, 0);
-    -moz-transform: translate3d(-50%, 20%, 0);
-    -o-transform: translate3d(-50%, 20%, 0);
-    -ms-transform: translate3d(-50%, 20%, 0);
-    transform: translate3d(-50%, 20%, 0);
+    -webkit-transform: translate3d(-50%, 0%, 0);
+    -moz-transform: translate3d(-50%, 0%, 0);
+    -o-transform: translate3d(-50%, 0%, 0);
+    -ms-transform: translate3d(-50%, 0%, 0);
+    transform: translate3d(-50%, 0%, 0);
+  }
+  section[data-area="about-us"] .context-bg.inverse {
+    display: none;
   }
   section[data-area="about-us"] .context-bg.inverse svg {
     width: 150%;
