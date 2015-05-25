@@ -6785,6 +6785,9 @@ header.is-collapsed .main-nav > li.active a {
   header .main-nav {
     display: none;
   }
+  header.is-collapsed {
+    height: 53.33333333px;
+  }
 }
 .menu-trigger {
   width: 45px;
@@ -7497,6 +7500,12 @@ section[data-area="landing-page"] .bg-context svg {
   position: absolute;
   top: 50%;
   right: 100%;
+  fill: #e53935;
+  zoom: 1;
+  filter: alpha(opacity=80);
+  -webkit-opacity: 0.8;
+  -moz-opacity: 0.8;
+  opacity: 0.8;
   -webkit-transform: translate3d(25%, -50%, 0);
   -moz-transform: translate3d(25%, -50%, 0);
   -o-transform: translate3d(25%, -50%, 0);
@@ -7692,7 +7701,7 @@ section[data-area="about-us"] .right-content {
   top: 0;
   bottom: 0;
   right: 0;
-  width: 70%;
+  width: 50%;
 }
 section[data-area="about-us"] .right-content .content {
   width: 50%;
@@ -7708,10 +7717,11 @@ section[data-area="about-us"] .right-content .content {
   color: white;
 }
 section[data-area="about-us"] .right-content .content > h2 {
-  padding: 15px;
+  padding: 10px;
   border: 3px solid #e53935;
   display: inline-block;
   margin-bottom: 30px;
+  font-size: 20px;
 }
 section[data-area="about-us"] .right-content .content > p {
   display: inline-block;
@@ -7730,7 +7740,7 @@ section[data-area="about-us"] .right-content .content > p {
   section[data-area="about-us"] .right-content .content {
     width: 100%;
     height: 100%;
-    padding: 110px 50px 30px;
+    padding: 80px 50px 30px;
     position: relative;
     top: auto;
     left: auto;
@@ -7801,11 +7811,11 @@ section[data-area="about-us"] .context-bg.inverse svg {
     top: 0;
     left: 50%;
     right: auto;
-    -webkit-transform: translate3d(-50%, 10%, 0);
-    -moz-transform: translate3d(-50%, 10%, 0);
-    -o-transform: translate3d(-50%, 10%, 0);
-    -ms-transform: translate3d(-50%, 10%, 0);
-    transform: translate3d(-50%, 10%, 0);
+    -webkit-transform: translate3d(-50%, 0%, 0);
+    -moz-transform: translate3d(-50%, 0%, 0);
+    -o-transform: translate3d(-50%, 0%, 0);
+    -ms-transform: translate3d(-50%, 0%, 0);
+    transform: translate3d(-50%, 0%, 0);
   }
   section[data-area="about-us"] .context-bg.inverse {
     display: none;
@@ -8043,13 +8053,14 @@ section[data-area="team"] .left-content .context-bg svg {
     width: auto;
     top: auto;
     left: 50%;
-    bottom: 30px;
+    bottom: 0px;
     -webkit-transform: translate3d(-50%, 0, 0);
     -moz-transform: translate3d(-50%, 0, 0);
     -o-transform: translate3d(-50%, 0, 0);
     -ms-transform: translate3d(-50%, 0, 0);
     transform: translate3d(-50%, 0, 0);
-    font-size: 20px;
+    font-size: 16px;
+    padding: 10px;
   }
   section[data-area="team"] .left-content .team-members {
     width: 100%;
@@ -8062,7 +8073,7 @@ section[data-area="team"] .left-content .context-bg svg {
   }
   section[data-area="team"] .left-content .team-members > li {
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
   section[data-area="team"] .left-content .team-members > li img {
     width: 100px;
@@ -8072,14 +8083,14 @@ section[data-area="team"] .left-content .context-bg svg {
     margin-top: 15px;
   }
   section[data-area="team"] .left-content .context-bg svg {
-    width: 200%;
+    width: 225%;
     right: auto;
     left: 50%;
-    -webkit-transform: translate3d(-50%, -40%, 0);
-    -moz-transform: translate3d(-50%, -40%, 0);
-    -o-transform: translate3d(-50%, -40%, 0);
-    -ms-transform: translate3d(-50%, -40%, 0);
-    transform: translate3d(-50%, -40%, 0);
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -moz-transform: translate3d(-50%, -50%, 0);
+    -o-transform: translate3d(-50%, -50%, 0);
+    -ms-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
   }
 }
 section[data-area="team"] .section-bg {
@@ -8212,6 +8223,6 @@ section .container {
 @media only screen and (max-width: 763px) {
   .contact-card {
     width: 330px;
-    margin: 50px auto 0;
+    margin: 0px auto 0;
   }
 }
