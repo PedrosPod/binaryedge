@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f76ff997-23a1-46ca-bac9-e8b46cda2a0b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/sections.less" afterPath="$PROJECT_DIR$/less/sections.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="f76ff997-23a1-46ca-bac9-e8b46cda2a0b" name="Default" comment="" />
     <ignored path="binaryedge.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,7 +24,7 @@
       <file leaf-file-name="sections.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/less/sections.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45989558">
+            <state vertical-scroll-proportion="0.48329177">
               <caret line="627" column="24" selection-start-line="627" selection-start-column="24" selection-end-line="627" selection-end-column="24" />
               <folding>
                 <element signature="e#86#144#0" expanded="false" />
@@ -118,10 +115,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="6144" />
-    <option name="y" value="181" />
-    <option name="width" value="4096" />
-    <option name="height" value="2304" />
+    <option name="x" value="6147" />
+    <option name="y" value="184" />
+    <option name="width" value="4110" />
+    <option name="height" value="2318" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -202,7 +199,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../gamesoft" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="FullScreen" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
@@ -259,10 +256,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="6144" y="181" width="4096" height="2304" extended-state="6" />
-    <editor active="true" />
+    <frame x="6147" y="184" width="4110" height="2318" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17529297" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17580803" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -641,7 +638,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/less/sections.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45989558">
+        <state vertical-scroll-proportion="0.48329177">
           <caret line="627" column="24" selection-start-line="627" selection-start-column="24" selection-end-line="627" selection-end-column="24" />
           <folding>
             <element signature="e#86#144#0" expanded="false" />
