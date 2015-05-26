@@ -469,13 +469,13 @@ section {
         bottom: 0;
         left: 0;
         z-index: 0 ;
-        .opacity(.85);
+        .opacity(1);
         svg {
           position: absolute;
           left: 100%;
-          .translate3d(-25%, -50%, 0);
+          .translate3d(-5%, -50%, 0);
           top: 50%;
-          width: 100%;
+          width: 200%;
           fill: @red;
         }
       }
@@ -520,6 +520,48 @@ section {
     }
     #slide2 {
       .section-bg {
+        background: @red;
+      }
+
+      .section-content
+      {
+        position: absolute;
+        top: 0; right: 0; bottom:0; left: 0;
+        z-index: 3;
+        padding: 10%;
+
+        .container
+        {
+          position: relative;
+          top: 50%;
+          .translate3d(0,-50%,0);
+
+          .border-right
+          {
+            border-right: 2px solid rgba(255,255,255,.65);
+            padding-right: 30px;
+          }
+          .border-left
+          {
+            border-left: 1px solid rgba(255,255,255,.65);
+            padding-left: 30px;
+          }
+
+          h2 
+          {
+            color: white;
+            letter-spacing: -1px;
+            font-size: 40px;
+            text-align: right;
+          }
+          p
+          {
+            font-size: 18px;
+            color: white;
+            font-family: @font-default;
+            font-weight: 300;
+          }
+        }
       }
     }
 

@@ -118,17 +118,52 @@ html.fp-enabled,
     opacity: 1;
 }
 .fp-slidesNav.bottom {
+
+    li
+    {
+        margin: 0  15px;
+    }
+
     top: 100%;
     .translate3d(0, -100px, 0);
-    a.active
-    {
-        span { background: #000; border-color: #000 }
-
-    }
     a
     {
+        span
+        {
+            width: 10px; height: 10px;
+            border-color: transparent;
+            background: white;
+        }
+        &:hover
+        {
+            span
+            {
+                width: 10px; height: 10px;
+                border-color: transparent;
 
+            }
+        }
     }
+    a.active
+    {
+        span
+        {
+            width: 10px; height: 10px;
+            border-color: transparent;
+            background: #000;
+        }
+        &:hover
+        {
+            span
+            {
+                width: 10px; height: 10px;
+                border-color: transparent;
+
+            }
+        }
+    }
+
+
 }
 .fp-slidesNav.top {
     top: 17px;
