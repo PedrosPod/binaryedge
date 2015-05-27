@@ -45,3 +45,12 @@ function initialize() {
     });
     //infowindow.open(map,marker);
 };
+
+!function(){
+
+    $('[data-trigger="show-more-text"]').on('click', function(ev){
+       ev.preventDefault();
+        $(this).toggleClass('is-active');
+        $(this).parent().toggleClass('more-text-fx');
+    });
+}();
