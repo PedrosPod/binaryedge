@@ -34,18 +34,19 @@ header
             .translateY(-50%);
             svg
             {
-                height: 100%;
+                height: @header-h / 1.5;
                 fill: white;
             }
         }
         .lettering
         {
             // box
-            height: 18px;
+            height: @header-h / 1.5;
             // position
             position: absolute;
-            top: 50%; margin-top: -9px;
+            top: 50%;
             left: 70px;
+          .translate3d(0,-50%,0);
             svg
             {
                 height: 100%;
@@ -119,15 +120,7 @@ header
                 fill: @gray !important;
             }
 
-            .logo
-            {
-                height: @header-h / 2;
-            }
-            .lettering
-            {
-                height: 14px;
-                left: 40px;
-            }
+
         }
         .main-nav
         {
@@ -155,13 +148,20 @@ header
         .logo-wrapper
         {
           margin-left: 0;
+          .logo
+          {
+            svg
+            {
+
+            }
+          }
         }
         .main-nav
         {  display: none;  }
         
         &.is-collapsed
         {
-          height: @header-h / 1.5;
+
         }
 
     }
