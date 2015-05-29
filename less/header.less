@@ -145,6 +145,7 @@ header
 
     @media @mobile
     {
+
         .logo-wrapper
         {
           margin-left: 0;
@@ -161,7 +162,25 @@ header
         
         &.is-collapsed
         {
+          height: @header-h / 1.5;
 
+          .logo-wrapper
+          {
+            margin-left: 0;
+            .logo
+            {
+              height: @header-h / 2;
+              svg
+              {
+                height: 100%;
+              }
+            }
+            .lettering
+            {
+              left: 60px;
+
+            }
+          }
         }
 
     }
