@@ -424,11 +424,23 @@ section {
         z-index: 3;
         padding: 10%;
 
+
         .container
         {
           position: relative;
           top: 50%;
-          .translate3d(0,-50%,0);
+          .translate3d(-25%,-50%,0);
+
+         @media @mobile
+         {
+           position: absolute;
+           width: 100%;
+           top: 0; right: 0; bottom: 0; left: 0;
+           .translate3d(0,0,0);
+
+             padding-top: @header-h ;
+
+         }
           
           > div
           {
@@ -439,6 +451,11 @@ section {
           {
             border-right: 2px solid rgba(255,255,255,.65);
             padding-right: 60px;
+            @media @mobile
+            {
+              border: 0;
+              padding: 0;
+            }
 
           }
           .border-left
@@ -446,6 +463,11 @@ section {
             border-left: 1px solid rgba(255,255,255,.65);
             padding-left: 60px;
             min-height: 250px;
+            @media @mobile
+            {
+              border: 0;
+              padding: 0;
+            }
           }
           
           .area-ico
@@ -475,6 +497,10 @@ section {
             font-size: 3em;
             line-height: 1;
             text-align: right;
+            @media @mobile
+            {
+              text-align: left;
+            }
           }
           p
           {
@@ -520,6 +546,12 @@ section {
               float: left;
               content: '';
             }
+
+            &.is-active
+            {
+              background: white;
+              color: @gray;
+            }
           }
           .read-more {
             display: block;
@@ -536,14 +568,16 @@ section {
             background: @red;
 
 
+
             svg
             {
-              width: 30px; height: 30px;
+              width: 24px; height: 24px;
               position: absolute;
               top: 50%; left: 50%;
               .translate3d(-50%, -50%, 0);
               margin-top: 2px;
               fill: white;
+
             }
 
             &:hover
@@ -563,13 +597,45 @@ section {
                 fill: white;
               }
             }
+            &:before
+            {
+              display: block;
+              width: 50px;
+              padding: 5px 10px;
+              position: absolute;
+              border: 2px solid white;
+              top: 100%; left: 50%;
+              .translate3d(-50%, 0,0);
+              margin-top: 15px;
+              content: 'Read more';
+
+              font-size: 10px;
+              text-transform: uppercase;
+              font-weight: 600;
+              color: white;
+
+              text-align: center;
+
+            }
+
             &.is-active
             {
               .rotate(180);
 
+              &:before
+              {
+                content: 'Read less';
+                .rotate(180);
+              }
 
 
 
+            }
+
+            @media @mobile
+            {
+              left: 50%; bottom: 0;
+              .translate3d(-50%, 0, 0);
             }
           }
 
@@ -667,6 +733,34 @@ section {
             font-weight: 300;
             .border-radius(3px);
           }
+
+        }
+
+        .see-services
+        {
+          display: inline-block;
+          margin-left: 15px;
+          color: white;
+          font-size: 16px;
+          padding: 5px 15px;
+          text-transform: uppercase;
+          font-weight: 600;
+          text-decoration: none;
+          background: @brand-info;
+          position: relative;
+          .border-radius(2px);
+          .translate3d(0,-5px,0);
+
+          @media @mobile
+          {
+            margin-top: 30px;
+          }
+        }
+        @media @mobile
+        {
+
+
+
         }
       }
 
@@ -734,34 +828,31 @@ section {
     }
     #slide3 {
       .section-bg {
-        background: #2C8C99;
+        background: @gray-darker;
       }
     }
     #slide4
     {
       .section-bg {
-        background: #2C8C99;
+        background: @gray-darker;
       }
       .area-ico
       {
         svg
         {
-          fill: darken(#2c8c99, 3%);
+          fill: @gray-dark;
           .second-color
           {
-            fill: darken(#2c8c99, 10%);
+            fill: @gray;
 
 
-            .keyframes(~'threeSixty, 0%{ opacity:0; transform: translate(0px,0px) } 50%{ opacity: 1;  transform: translate(30px,0px) } 100%{ opacity:0;  transform: translate(0px,0px)}');
-
-            .animation(threeSixty 10s linear infinite);
 
           }
         }
       }
       .read-more
       {
-        background: #2C8C99;
+        background: @gray-darker;
       }
     }
 
@@ -1114,5 +1205,114 @@ section {
     }
   }
 }
+.side-panel
+{
+  width: 40%;
+  padding: 60px;
+  position: absolute;
+  top: 80px; left: 0; bottom: 0px;
+  .translate3d(-100%,0,0);
+  background: rgba(0,0,0,.98);
+  z-index: 999;
+  overflow: hidden;
+  overflow-y: auto;
+  .transition-normal();
+  visibility: hidden;
 
+  @media @mobile
+  {
+    width: 100%;
+    top:  @header-h / 1.5;
+  }
+  h2
+  {
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 50px;
+    color: white;
+  }
+  p
+  {
+    color: darken(@gray-lighter, 10%);
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-weight: 300;
+    &.intro-p
+    {
+      font-size: 21px;
+      letter-spacing: -0.5px;
+      font-weight: 600;
+      font-family: @font-headings;
+      line-height: 1.2;
+      color: white;
+    }
+  }
+
+  .close-panel
+  {
+    width: 50px; height: 50px;
+    display: block;
+    position: absolute;
+    right: 30px; top: 30px;
+   
+    background: none;
+    border: 0;
+    &:before,
+    &:after
+    {
+      display: block;
+      width: 20px;
+      height: 2px;
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      margin: -1px 0 0 -10px;
+
+      background: @gray;
+
+    }
+    &:before
+    {
+      .rotate(45);
+    }
+    &:after
+    {
+      .rotate(135);
+    }
+    &:hover
+    {
+      &:before,
+      &:after
+      {
+        background: white;
+      }
+    }
+  }
+
+  &.is-visible
+  {
+    .translate3d(0,0,0);
+    visibility: visible;
+  }
+}
+.feature-list
+{
+  padding: 0; margin: 15px 0;
+  list-style: none;
+  width: 100%;
+
+
+  > li
+  {
+    width: 100%;
+    float: left;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px sold rgba(255,255,255,.25);
+    font-size: 16px;
+    color: white;
+  }
+}
 

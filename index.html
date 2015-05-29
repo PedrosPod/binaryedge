@@ -284,6 +284,7 @@
                         <p>
                             We develop <span>security products</span> and provide our clients width new ways of securing
                             and testing their products
+                            <a href="#3rdPage/slide2" class="see-services">See our services</a>
                         </p>
                     </div>
                     <div class="context-bg">
@@ -314,7 +315,7 @@
 
             </div>
 
-            <div class="slide" id="slide2">
+            <div class="slide"  data-anchor="slide2">
 
                 <div class="section-content">
                     <div class="container">
@@ -376,6 +377,9 @@
             <div class="slide" id="slide3">
                 <div class="section-content">
                     <div class="container">
+
+
+
                         <div class="col-lg 3 col-lg-4 col-md-12 col-sm-12 border-right">
                             <span class="area-ico">
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -436,6 +440,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
                 <div class="section-bg">
                     <div class="context-bg">
@@ -444,7 +449,31 @@
             </div>
 
             <div class="slide" id="slide4">
-                <div class="section-content">
+                <div class="section-content" >
+                    <div class="side-panel" data-widget="open-pentesting-panel">
+                        <div class="this-header">
+                            <button class="close-panel" data-trigger="close-panels">
+
+                            </button>
+                        </div>
+                        <div class="this-body">
+                            <h2>Pentesting</h2>
+
+                            <p class="intro-p">
+                                From the initial planning of your asset, to designing, developing, testing and reviewing it, we work with you across the entire process. This way you will be able to have a stronger and secure foundation on which you can build upon.
+                            </p>
+                            <p>
+                                This way you will be able to have a stronger and secure foundation on which you can build upon.
+                                We complement this type of testing by providing you metrics along the way from a security perspective.
+                                </p>
+                            <p>
+                                Also, all communication and interaction with you is done via our custom developed security platform, which allows us to share and work with you in a dynamic way. After registering with us, you will be provided with accounts that will allow you to create projects and submit apps and websites to be tested. As soon as they have been tested, you will be notified, the reports will be immediately available and you will have an engineer or a consultant available in case you have any questions on how to address the issues found.
+                            </p>
+                            <p>
+                                Our platform also allows you to pull statistics from different parts of your project that will allow you to see how and where you can improve security across your organisation.
+                            </p>
+                        </div>
+                    </div>
                     <div class="container">
                         <div class="col-lg 3 col-lg-4 col-md-12 col-sm-12 border-right">
                             <div class="area-ico">
@@ -517,7 +546,7 @@
                                 </p>
 
                                 <div class="clearfix"></div>
-                                <a href="" class="open-panel" data-trigger="open-panel">Check this diagram and description of this process</a>
+                                <a href="" class="open-panel" data-floater="open-pentesting-panel" data-trigger="open-pentesting-panel">Learn more about Pentesting</a>
 
                             </div>
                         </div>
@@ -530,6 +559,37 @@
             </div>
             <div class="slide" id="slide5">
                 <div class="section-content">
+                    <div class="side-panel" data-widget="open-redteam-panel">
+                        <div class="this-header">
+                            <button class="close-panel" data-trigger="close-panels">
+
+                            </button>
+                        </div>
+                        <div class="this-body">
+                            <h2>Red Team Engagement</h2>
+
+                            <p class="intro-p">
+                                A red team is a type of engagement that should be attempted by organizations which either have highly classified information on their ecosystem or that are highly confident in the efficiency of their security levels and wish to put them to a test.
+                                This type of engagement will provide the client with a large scale test that will attempt to break and penetrate all defenses of your ecosystem.
+
+                            </p>
+                            <p>
+                                In this type of engagement, the Red Team from BinaryEdge will work as actual attackers and try to obtain control and access all information that your security is trying to defend. In the typical types of engagements, only digital systems are tested; in red teaming social, engineering and physical defenses are also put to a test.
+                            </p>
+                            <p>
+                                This type of engagement is perfect for you, as a client, to gain knowledge, such as:
+                            </p>
+                            <ul class="feature-list">
+                                <li> How are your incident response systems and processes working against real-world threats? How can you improve them?</li>
+                                <li>Gain deeper understanding of the current flaws that exist in your ecosystem.</li>
+                                <li>Fill voids in your security training and awareness programs for both technical and non-technical people.</li>
+                                <li> Identify new attack vectors and threats that may affect you.</li>
+                            </ul>
+
+
+
+                        </div>
+                    </div>
                     <div class="container">
                         <div class="col-lg 3 col-lg-4 col-md-12 col-sm-12 border-right">
                             <div class="area-ico">
@@ -591,6 +651,7 @@
                                 <p>
                                     This type of engagement will provide the client with a large scale test that will attempt to break and penetrate all defenses of your ecosystem.
                                 </p>
+                                <a href="" class="open-panel" data-floater="open-redteam-panel" data-trigger="open-redteam-panel">Learn more about Red Team Engagement</a>
 
 
                             </div>
@@ -832,6 +893,7 @@
             slidesNavigation: true,
             slidesNavPosition: 'bottom',
             controlArrows: false,
+            scrollOverflow: true,
 
             'afterLoad': function (anchorLink, index) {
                 //for section 2...
@@ -852,6 +914,7 @@
                 }
 
             }
+
 
         });
 
