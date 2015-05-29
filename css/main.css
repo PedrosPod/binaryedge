@@ -7309,6 +7309,17 @@ html.fp-enabled,
   height: 10px;
   border-color: transparent;
 }
+@media only screen and (max-width: 763px) {
+  .fp-slidesNav.bottom {
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin-left: 0 !important;
+  }
+  .fp-slidesNav.bottom > li {
+    display: inline-block;
+  }
+}
 .fp-slidesNav.top {
   top: 17px;
 }
@@ -7874,16 +7885,17 @@ section[data-area="services"] .slide .section-content {
   bottom: 0;
   left: 0;
   z-index: 3;
-  padding: 10%;
+  padding: 0;
 }
 section[data-area="services"] .slide .section-content .container {
   position: relative;
   top: 50%;
-  -webkit-transform: translate3d(-25%, -50%, 0);
-  -moz-transform: translate3d(-25%, -50%, 0);
-  -o-transform: translate3d(-25%, -50%, 0);
-  -ms-transform: translate3d(-25%, -50%, 0);
-  transform: translate3d(-25%, -50%, 0);
+  width: 80%;
+  -webkit-transform: translate3d(0, -50%, 0);
+  -moz-transform: translate3d(0, -50%, 0);
+  -o-transform: translate3d(0, -50%, 0);
+  -ms-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
 }
 @media only screen and (max-width: 763px) {
   section[data-area="services"] .slide .section-content .container {
@@ -8269,7 +8281,11 @@ section[data-area="services"] #slide1 .services-entrance .see-services {
 }
 @media only screen and (max-width: 763px) {
   section[data-area="services"] #slide1 .services-entrance .see-services {
+    margin: 0;
     margin-top: 30px;
+    display: block;
+    float: left;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 763px) {
@@ -8284,6 +8300,7 @@ section[data-area="services"] #slide1 .services-entrance .see-services {
 section[data-area="services"] #slide1 .context-bg {
   height: 100%;
   position: absolute;
+  display: none;
   top: 0;
   right: 0;
   bottom: 0;
@@ -8313,7 +8330,7 @@ section[data-area="services"] #slide1 .section-bg {
 }
 @media only screen and (max-width: 763px) {
   section[data-area="services"] #slide1 .services-entrance {
-    padding: 60px 0px;
+    padding: 60px 15px;
   }
   section[data-area="services"] #slide1 .services-entrance h2 {
     top: 0;
@@ -8346,7 +8363,16 @@ section[data-area="services"] #slide2 .section-bg {
   background: #e53935;
 }
 section[data-area="services"] #slide3 .section-bg {
-  background: #222222;
+  background: #1B98E0;
+}
+section[data-area="services"] #slide3 .read-more {
+  background: #1B98E0;
+}
+section[data-area="services"] #slide3 .area-ico svg {
+  fill: #198fd2;
+}
+section[data-area="services"] #slide3 .area-ico svg .second-color {
+  fill: #1679b2;
 }
 section[data-area="services"] #slide4 .section-bg {
   background: #222222;
@@ -8672,8 +8698,8 @@ section .container {
   color: white;
 }
 .contact-card {
-  width: 350px;
-  height: 550px;
+  width: 100%;
+  height: 100%;
   position: absolute;
   z-index: 1;
   background: white;
@@ -8767,23 +8793,20 @@ section .container {
   display: inline-block;
   margin-left: 15px;
 }
-@media only screen and (max-width: 763px) {
-  .contact-card {
-    width: 100%;
-    margin: 0px auto 0;
-  }
-  .contact-card .header {
-    height: 220px;
-  }
-}
 .card {
   display: block;
   width: 350px;
   height: 550px;
-  position: relative;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  -moz-transform: translate3d(-50%, -50%, 0);
+  -o-transform: translate3d(-50%, -50%, 0);
+  -ms-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
   z-index: 1;
   margin: 20px;
-  float: right;
   -webkit-perspective: 1000px;
   -moz-perspective: 1000px;
   perspective: 1000px;
@@ -8808,8 +8831,9 @@ section .container {
 }
 @media only screen and (max-width: 763px) {
   .card {
-    width: 100%;
-    margin: 45px 0 0;
+    width: 90%;
+    height: 90%;
+    margin-left: 0px;
   }
 }
 .card .wrap.flipped {
@@ -8843,19 +8867,6 @@ section .container {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   color: #5bc0de;
-}
-.card .contact-card .name {
-  width: 160px;
-  position: absolute;
-  -moz-backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-transform: rotateZ(-90deg);
-  -ms-transform: rotateZ(-90deg);
-  -webkit-transform: rotateZ(-90deg);
-  transform: rotateZ(-90deg);
-  bottom: 78px;
-  right: -52px;
 }
 .card .contact-card.back {
   -moz-transform: rotateY(180deg);

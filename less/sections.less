@@ -422,14 +422,15 @@ section {
         position: absolute;
         top: 0; right: 0; bottom:0; left: 0;
         z-index: 3;
-        padding: 10%;
+        padding: 0;
 
 
         .container
         {
           position: relative;
           top: 50%;
-          .translate3d(-25%,-50%,0);
+          width: 80%;
+          .translate3d(0,-50%,0);
 
          @media @mobile
          {
@@ -767,13 +768,18 @@ section {
 
           @media @mobile
           {
+            margin: 0;
             margin-top: 30px;
+            display: block;
+            float: left;
+            width: 100%;
           }
         }
         @media @mobile
         {
           width: 100%;
           left: 0;
+
           p 
           {
             width: 100%;
@@ -786,6 +792,7 @@ section {
       .context-bg {
         height: 100%;
         position: absolute;
+        display: none;
         top: 0;
         right: 0;
         bottom: 0;
@@ -812,7 +819,7 @@ section {
       {
         .services-entrance
         {
-          padding: 60px 0px;
+          padding: 60px 15px;
           h2
           {
             top: 0;
@@ -854,7 +861,22 @@ section {
     }
     #slide3 {
       .section-bg {
-        background: @gray-darker;
+        background: #1B98E0;
+      }
+      .read-more
+      {
+        background: #1B98E0;
+      }
+      .area-ico
+      {
+        svg
+        {
+          fill: darken(#1B98E0, 3%);
+          .second-color
+          {
+            fill: darken(#1B98E0, 10%);
+          }
+        }
       }
     }
     #slide4
@@ -1205,8 +1227,8 @@ section {
 
 .contact-card {
   // box
-  width: 350px;
-  height: 550px;
+  width: 100%;
+  height: 100%;
   // position
 
   position: absolute;
@@ -1331,21 +1353,7 @@ section {
     }
   }
 
-  @media @mobile
-  {
-    width: 100%;
-    margin: 0px auto 0;
 
-
-    .header
-    {
-        height: 220px;
-    }
-    .body
-    {
-
-    }
-  }
 }
 
 .card
@@ -1359,10 +1367,13 @@ section {
   display: block;
   width: 350px;
   height: 550px;
-  position: relative;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  .translate3d(-50%,-50%,0);
   z-index: 1;
   margin: 20px;
-  float: right;
+
   .perspective(1000px);
 
   a {
@@ -1388,9 +1399,11 @@ section {
 
   @media @mobile
   {
-    width: 100%;
-    margin: 45px 0 0;
+    width: 90%;
+    height: 90%;
+    margin-left: 0px;
   }
+
 
 
 }
@@ -1431,22 +1444,11 @@ section {
 .card .contact-card a.flipback {
 
 }
-.card .contact-card .name {
-  width: 160px;
-  position: absolute;
-  -moz-backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-transform: rotateZ(-90deg);
-  -ms-transform: rotateZ(-90deg);
-  -webkit-transform: rotateZ(-90deg);
-  transform: rotateZ(-90deg);
-  bottom: 78px;
-  right: -52px;
-}
+
 
 
 .card .contact-card.back {
+
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
@@ -1575,7 +1577,6 @@ section {
     border: 0;
     border-bottom: 1px solid @gray-lighter;
     background: none;
-
     .transition-normal();
 
     &:focus
