@@ -935,40 +935,81 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-        $('#fullpage').fullpage({
-            anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage'],
-            sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C', '#FF0000', '#FF7700'],
-            navigation: true,
-            menu: '#menu',
-            navigationPosition: 'right',
-            navigationTooltips: ['Home', 'About Us', 'Service', 'Team', 'Contact us'],
-            slidesNavigation: true,
-            slidesNavPosition: 'bottom',
-            controlArrows: false,
-            scrollOverflow: true,
 
-            'afterLoad': function (anchorLink, index) {
-                //for section 2...
-                if (index == 2) {
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            $('#fullpage').fullpage({
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage'],
+                sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C', '#FF0000', '#FF7700'],
+                navigation: false,
+                menu: '#menu',
+                navigationPosition: 'right',
+                navigationTooltips: ['Home', 'About Us', 'Service', 'Team', 'Contact us'],
+                slidesNavigation: true,
+                slidesNavPosition: 'bottom',
+                controlArrows: false,
+                scrollOverflow: true,
+                autoScrolling: false,
+
+                'afterLoad': function (anchorLink, index) {
+                    //for section 2...
+                    if (index == 2) {
+
+                    }
+                },
+
+                'onLeave': function (index, nextIndex, direction) {
+                    //going from section 3 to 4
+                    if (index == 1 && direction == 'down') {
+                        $('header').addClass('is-collapsed');
+                    }
+
+                    //going form section 3 to 2
+                    else if (index < 3 && direction == 'up') {
+                        $('header').removeClass('is-collapsed');
+                    }
 
                 }
-            },
 
-            'onLeave': function (index, nextIndex, direction) {
-                //going from section 3 to 4
-                if (index == 1 && direction == 'down') {
-                    $('header').addClass('is-collapsed');
+
+            });
+        } else
+        {
+            $('#fullpage').fullpage({
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage'],
+                sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C', '#FF0000', '#FF7700'],
+                navigation: true,
+                menu: '#menu',
+                navigationPosition: 'right',
+                navigationTooltips: ['Home', 'About Us', 'Service', 'Team', 'Contact us'],
+                slidesNavigation: true,
+                slidesNavPosition: 'bottom',
+                controlArrows: false,
+                scrollOverflow: true,
+
+                'afterLoad': function (anchorLink, index) {
+                    //for section 2...
+                    if (index == 2) {
+
+                    }
+                },
+
+                'onLeave': function (index, nextIndex, direction) {
+                    //going from section 3 to 4
+                    if (index == 1 && direction == 'down') {
+                        $('header').addClass('is-collapsed');
+                    }
+
+                    //going form section 3 to 2
+                    else if (index < 3 && direction == 'up') {
+                        $('header').removeClass('is-collapsed');
+                    }
+
                 }
 
-                //going form section 3 to 2
-                else if (index < 3 && direction == 'up') {
-                    $('header').removeClass('is-collapsed');
-                }
 
-            }
+            });
+        }
 
-
-        });
 
 
         $('[data-menuanchor="firstPage"] > a ').on('click', function () {

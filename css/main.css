@@ -7902,9 +7902,9 @@ section[data-area="services"] .slide .section-content .container {
     position: absolute;
     width: auto;
     top: 30px;
-    right: 15px;
+    right: 30px;
     bottom: 0;
-    left: 15px;
+    left: 30px;
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     -o-transform: translate3d(0, 0, 0);
@@ -7985,6 +7985,7 @@ section[data-area="services"] .slide .section-content .container h2 {
 @media only screen and (max-width: 763px) {
   section[data-area="services"] .slide .section-content .container h2 {
     text-align: left;
+    font-size: 2.5em;
   }
 }
 section[data-area="services"] .slide .section-content .container p {
@@ -7999,6 +8000,11 @@ section[data-area="services"] .slide .section-content .container p {
   -moz-transition: all .25s cubic-bezier(.4,0,.2,1);
   -o-transition: all .25s cubic-bezier(.4,0,.2,1);
   transition: all .25s cubic-bezier(.4,0,.2,1);
+}
+@media only screen and (max-width: 763px) {
+  section[data-area="services"] .slide .section-content .container p {
+    font-size: 18px;
+  }
 }
 section[data-area="services"] .slide .section-content .container .open-panel {
   position: relative;
@@ -8330,7 +8336,7 @@ section[data-area="services"] #slide1 .section-bg {
 }
 @media only screen and (max-width: 763px) {
   section[data-area="services"] #slide1 .services-entrance {
-    padding: 60px 15px;
+    padding: 60px 30px;
   }
   section[data-area="services"] #slide1 .services-entrance h2 {
     top: 0;
@@ -8709,7 +8715,7 @@ section .container {
 }
 .contact-card .header {
   width: 100%;
-  height: 300px;
+  height: 55%;
   padding: 30px;
   position: relative;
   background: #e53935;
@@ -8759,7 +8765,7 @@ section .container {
 }
 .contact-card .body {
   padding: 30px 30px 30px;
-  height: 250px;
+  height: 45%;
   width: 100%;
   float: left;
 }
@@ -8831,9 +8837,9 @@ section .container {
 }
 @media only screen and (max-width: 763px) {
   .card {
-    width: 90%;
-    height: 90%;
-    margin-left: 0px;
+    width: 300px;
+    height: 480px;
+    margin: 20px 0 0;
   }
 }
 .card .wrap.flipped {
@@ -9012,8 +9018,8 @@ section .container {
   box-shadow: 0 1px 0 #555555;
 }
 .form-line > textarea {
-  height: 200px;
-  margin-top: 15px;
+  height: 100px;
+  margin-top: 30px;
   border-bottom: 0;
 }
 .form-line > textarea:focus {
