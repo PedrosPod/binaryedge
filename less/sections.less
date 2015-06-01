@@ -422,20 +422,21 @@ section {
         position: absolute;
         top: 0; right: 0; bottom:0; left: 0;
         z-index: 3;
-        padding: 10%;
+        padding: 0;
 
 
         .container
         {
           position: relative;
           top: 50%;
-          .translate3d(-25%,-50%,0);
+          width: 80%;
+          .translate3d(0,-50%,0);
 
          @media @mobile
          {
            position: absolute;
-           width: 100%;
-           top: 0; right: 0; bottom: 0; left: 0;
+           width: auto;
+           top: 30px; right: 30px; bottom: 0; left: 30px;
            .translate3d(0,0,0);
 
              padding-top: @header-h ;
@@ -488,6 +489,18 @@ section {
                 fill: darken(@red, 10%);
               }
             }
+
+            @media @mobile
+            {
+              width: 200px; height: 200px;
+              position: fixed;
+              bottom: 30px; top: auto; right: 30px;
+              .translate3d(0,-50%,0);
+              svg
+              {
+                fill: rgba(0,0,0,.075);
+              }
+            }
           }
 
           h2
@@ -500,6 +513,7 @@ section {
             @media @mobile
             {
               text-align: left;
+              font-size: 2.5em;
             }
           }
           p
@@ -512,6 +526,11 @@ section {
             font-family: @font-default;
             font-weight: 300;
             .transition-normal();
+
+            @media @mobile
+            {
+              font-size: 18px;
+            }
 
           }
 
@@ -634,8 +653,8 @@ section {
 
             @media @mobile
             {
-              left: 50%; bottom: 0;
-              .translate3d(-50%, 0, 0);
+              display: none;
+
             }
           }
 
@@ -643,10 +662,12 @@ section {
           .intro-p
           {
             position: absolute;
-            top: 0;
+            top:30px;
             .opacity(1);
             .transition-normal();
             .translate3d(0,0,0);
+
+
           }
 
           .more-p
@@ -753,12 +774,22 @@ section {
 
           @media @mobile
           {
+            margin: 0;
             margin-top: 30px;
+            display: block;
+            float: left;
+            width: 100%;
           }
         }
         @media @mobile
         {
+          width: 100%;
+          left: 0;
 
+          p 
+          {
+            width: 100%;
+          }
 
 
         }
@@ -767,6 +798,7 @@ section {
       .context-bg {
         height: 100%;
         position: absolute;
+        display: none;
         top: 0;
         right: 0;
         bottom: 0;
@@ -808,6 +840,13 @@ section {
             font-weight: 500;
             line-height: 1.6;
 
+            span
+            {
+              background: none;
+              color: @red;
+              font-weight: 600;
+            }
+
           }
         }
         .context-bg
@@ -828,7 +867,22 @@ section {
     }
     #slide3 {
       .section-bg {
-        background: @gray-darker;
+        background: #1B98E0;
+      }
+      .read-more
+      {
+        background: #1B98E0;
+      }
+      .area-ico
+      {
+        svg
+        {
+          fill: darken(#1B98E0, 3%);
+          .second-color
+          {
+            fill: darken(#1B98E0, 10%);
+          }
+        }
       }
     }
     #slide4
@@ -1062,149 +1116,7 @@ section {
   }
 }
 
-.contact-card {
-  // box
-  width: 350px;
-  height: 550px;
-  // position
-  float: right;
-  position: relative;
-  z-index: 1;
-  //position: absolute;
-  //right: 15%;
-  //top: 50%;
-  //margin-top: -275px;
-  //z-index: 2;
-  // Style
-  background: white;
-  .box-shadow(~"0px 2px 4px rgba(0,0,0,.12), 0px 8px 16px rgba(0,0,0,.24)");
 
-  .header {
-    // box
-    width: 100%;
-    height: 300px;
-    padding: 30px;
-    // position
-    position: relative;
-    // style
-    background: @red;
-
-    .logo-solo {
-      // box
-      width: 50px;
-      height: 50px;
-      // position
-      position: absolute;
-      left: 50%;
-      margin-left: -25px;
-      top: 50%;
-      margin-top: -50px;
-      svg {
-        width: 100%;
-        fill: white;
-      }
-    }
-    .logo-lettering {
-      // box
-      width: 100px;
-      height: 50px;
-      // position
-      position: absolute;
-      left: 50%;
-      margin-left: -50px;
-      top: 50%;
-      margin-top: 10px;
-      svg {
-        width: 100%;
-        fill: white;
-      }
-    }
-
-    .city-origin {
-      // box
-      width: 100%;
-      height: 20px;
-      // position
-      position: absolute;
-      bottom: 50px;
-      left: 50%;
-      .translateX(-50%);
-      // type
-      font-family: @font-headings;
-      font-size: 12px;
-      text-transform: uppercase;
-      text-align: center;
-      color: rgba(0, 0, 0, .4);
-    }
-
-  }
-
-  .body {
-    // box
-    padding: 60px 30px 30px;
-    height: 250px;
-    width: 100%;
-    // position
-    float: left;
-
-    .address {
-      // box
-      width: 100%;
-      margin-bottom: 30px;
-      padding-left: 40px;
-      // position
-      position: relative;
-      float: left;
-
-      // type
-      font-family: @font-default;
-      color: @gray;
-
-      .ico {
-        // box
-        width: 20px;
-        height: 20px;
-        display: block;
-        // position
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        svg {
-          width: 20px;
-          height: 20px;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          margin: -10px 0 0 -10px;
-          fill: @gray-light;
-        }
-      }
-
-      a {
-        // box
-        display: inline-block;
-        margin-left: 15px;
-      }
-    }
-  }
-
-  @media @mobile
-  {
-    width: 330px;
-   margin: 0px auto 0;
-
-
-    .header
-    {
-
-    }
-    .body
-    {
-
-    }
-  }
-}
 .side-panel
 {
   width: 40%;
@@ -1316,3 +1228,382 @@ section {
   }
 }
 
+
+// Flip Card
+
+.contact-card {
+  // box
+  width: 100%;
+  height: 100%;
+  // position
+
+  position: absolute;
+
+  z-index: 1;
+  //position: absolute;
+  //right: 15%;
+  //top: 50%;
+  //margin-top: -275px;
+  //z-index: 2;
+  // Style
+  background: white;
+  .box-shadow(~"0px 2px 4px rgba(0,0,0,.12), 0px 8px 16px rgba(0,0,0,.24)");
+
+  .header {
+    // box
+    width: 100%;
+    height: 55%;
+    padding: 30px;
+    // position
+    position: relative;
+    // style
+    background: @red;
+
+    .logo-solo {
+      // box
+      width: 50px;
+      height: 50px;
+      // position
+      position: absolute;
+      left: 50%;
+      margin-left: -25px;
+      top: 50%;
+      margin-top: -50px;
+      svg {
+        width: 100%;
+        fill: white;
+      }
+    }
+    .logo-lettering {
+      // box
+      width: 100px;
+      height: 50px;
+      // position
+      position: absolute;
+      left: 50%;
+      margin-left: -50px;
+      top: 50%;
+      margin-top: 10px;
+      svg {
+        width: 100%;
+        fill: white;
+      }
+    }
+
+    .city-origin {
+      // box
+      width: 100%;
+      height: 20px;
+      // position
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      .translateX(-50%);
+      // type
+      font-family: @font-headings;
+      font-size: 12px;
+      text-transform: uppercase;
+      text-align: center;
+      color: rgba(0, 0, 0, .4);
+    }
+
+  }
+
+  .body {
+    // box
+    padding: 30px 30px 30px;
+    height: 45%;
+    width: 100%;
+    // position
+    float: left;
+
+    .address {
+      // box
+      width: 100%;
+      margin-bottom: 30px;
+      padding-left: 40px;
+      // position
+      position: relative;
+      float: left;
+
+      // type
+      font-family: @font-default;
+      color: @gray;
+
+      .ico {
+        // box
+        width: 20px;
+        height: 20px;
+        display: block;
+        // position
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        svg {
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin: -10px 0 0 -10px;
+          fill: @gray-light;
+        }
+      }
+
+      a {
+        // box
+        display: inline-block;
+        margin-left: 15px;
+      }
+    }
+  }
+
+
+}
+
+.card
+{
+
+}
+
+
+.card {
+
+  display: block;
+  width: 350px;
+  height: 550px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  .translate3d(-50%,-50%,0);
+  z-index: 1;
+  margin: 20px;
+
+  .perspective(1000px);
+
+  a {
+    cursor: pointer;
+  }
+
+  .wrap
+  {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -moz-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -moz-transition: -moz-transform 0.4s linear;
+    -o-transition: -o-transform 0.4s linear;
+    -webkit-transition: -webkit-transform 0.4s linear;
+    transition: transform 0.4s linear;
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  }
+
+  @media @mobile
+  {
+    width: 300px;
+    height: 480px;
+    margin: 20px 0 0;
+  }
+
+
+
+}
+
+.card .wrap.flipped {
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.card .wrap.flipped .name, .card .wrap.flipped .flip {
+  background: none;
+  color: white;
+}
+.card .contact-card {
+
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+}
+.card .contact-card img {
+  top: 0;
+  left: 0;
+}
+.card .contact-card a.flip, .card .contact-card a.flipback {
+  display: inline-block;
+  width: 100%;
+
+  margin:0; padding: 0;
+  margin-top: 5px;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  color: @brand-info;
+}
+.card .contact-card a.flipback {
+
+}
+
+
+
+.card .contact-card.back {
+
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  .header{
+    height: 150px;
+    h4, h6
+    {
+      color: white;
+    }
+    h4
+    {
+      width: 100%;
+      float: left;
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+    h6
+    {
+      font-size: 16px;
+      margin: 0;
+      text-transform: none;
+      font-weight: normal;
+      letter-spacing: normal;
+    }
+    .flipback
+    {
+      display: block;
+      width: 30px; height: 30px;
+
+      position: absolute;
+      top: 15px; right: 15px;
+
+      border: 0;
+      background: none;
+
+      &:before,
+      &:after
+      {
+        width: 20px;
+        height: 3px;
+        display: block;
+
+        position: absolute;
+        top: 50%; left: 50%;
+        margin: -1.5px 0 0 -10px;
+
+        content: '';
+        background: rgba(255,255,255,1);
+        .transition-normal();
+      }
+      &:before
+      {
+        .rotate(45);
+      }
+      &:after
+      {
+        .rotate(135);
+      }
+      &:hover
+      {
+        &:before,
+        &:after
+        {
+          background: rgba(255, 255, 255, 1);
+          .rotate(0);
+        }
+
+      }
+    }
+  }
+  .body
+  {
+    padding: 15px 30px;
+  }
+}
+
+.x .wrap.flipped {
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+.x .contact-card.back {
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+.d .wrap.flipped {
+  -moz-transform: rotate3d(45, 45, 0, 180deg);
+  -ms-transform: rotate3d(45, 45, 0, 180deg);
+  -webkit-transform: rotate3d(45, 45, 0, 180deg);
+  transform: rotate3d(45, 45, 0, 180deg);
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.d .contact-card.back {
+  -moz-transform: rotate3d(45, 45, 0, 180deg);
+  -ms-transform: rotate3d(45, 45, 0, 180deg);
+  -webkit-transform: rotate3d(45, 45, 0, 180deg);
+  transform: rotate3d(45, 45, 0, 180deg);
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+
+// CONTACT FORM
+
+.form-line
+{
+  margin-bottom: 5px;
+  > input[type="text"], textarea {
+    width: 100%;
+    height: 45px;
+
+    border: 0;
+    border-bottom: 1px solid @gray-lighter;
+    background: none;
+    .transition-normal();
+
+    &:focus
+    {
+      outline: none;
+      border-bottom-color: @gray;
+      color: @gray;
+      .box-shadow(~"0 1px 0 @{gray}");
+    }
+  }
+  > textarea
+  {
+    height: 100px;
+    margin-top:30px;
+    border-bottom: 0;
+    &:focus
+    {
+      border: 0;
+      .box-shadow(~"none");
+      padding: 15px;
+      background: @gray-lighter;
+    }
+  }
+}

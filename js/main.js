@@ -111,3 +111,11 @@ function initialize() {
         });
     });
 }();
+
+!function(){
+    $(".flip").click(function(){
+        $(this).parents(".wrap").addClass("flipped");});
+
+    $(".flipback").click(function(){
+        $(this).parents(".wrap").removeClass("flipped");});
+}();
