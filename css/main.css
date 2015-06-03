@@ -7314,6 +7314,12 @@ html.fp-enabled,
   .fp-slidesNav.bottom {
     width: 100%;
     left: 0;
+    -webkit-transform: translate3d(0, -30px, 0);
+    -moz-transform: translate3d(0, -30px, 0);
+    -o-transform: translate3d(0, -30px, 0);
+    -ms-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+    z-index: 1;
     text-align: center;
     margin-left: 0 !important;
   }
@@ -7595,6 +7601,7 @@ section[data-area="landing-page"] .center-wrapper h6 {
   width: auto;
   margin: 30px auto 0;
   padding: 0px 30px;
+  background: rgba(0, 0, 0, 0.6);
   border: 2px solid white;
   position: relative;
   line-height: 38px;
@@ -7902,7 +7909,7 @@ section[data-area="services"] .slide .section-content .container {
   section[data-area="services"] .slide .section-content .container {
     position: absolute;
     width: auto;
-    top: 30px;
+    top: 0px;
     right: 30px;
     bottom: 0;
     left: 30px;
@@ -8038,6 +8045,11 @@ section[data-area="services"] .slide .section-content .container .open-panel.is-
   background: white;
   color: #555555;
 }
+@media only screen and (max-width: 763px) {
+  section[data-area="services"] .slide .section-content .container .open-panel {
+    margin-top: 0;
+  }
+}
 section[data-area="services"] .slide .section-content .container .read-more {
   display: block;
   height: 56px;
@@ -8136,7 +8148,20 @@ section[data-area="services"] .slide .section-content .container .read-more.is-a
 }
 @media only screen and (max-width: 763px) {
   section[data-area="services"] .slide .section-content .container .read-more {
-    display: none;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translate3d(-50%, 80px, 0);
+    -moz-transform: translate3d(-50%, 80px, 0);
+    -o-transform: translate3d(-50%, 80px, 0);
+    -ms-transform: translate3d(-50%, 80px, 0);
+    transform: translate3d(-50%, 80px, 0);
+  }
+  section[data-area="services"] .slide .section-content .container .read-more.is-active {
+    bottom: auto;
+    top: -80px;
+    right: -40px;
+    left: auto;
+    margin: 0;
   }
 }
 section[data-area="services"] .slide .section-content .container .intro-p {
@@ -8181,6 +8206,15 @@ section[data-area="services"] .slide .section-content .container .more-p p:first
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 30px;
+}
+@media only screen and (max-width: 763px) {
+  section[data-area="services"] .slide .section-content .container .more-p p {
+    font-size: 16px;
+  }
+  section[data-area="services"] .slide .section-content .container .more-p p:first-child {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
 }
 section[data-area="services"] .slide .section-content .container .more-text-fx .intro-p {
   -webkit-transform: translate3d(0, -100%, 0);
@@ -8419,7 +8453,7 @@ section[data-area="team"] .left-content .content {
 }
 section[data-area="team"] .left-content .content h2 {
   padding: 15px;
-  border: 3px solid #e53935;
+  border: 3px solid white;
   width: 30%;
   position: absolute;
   top: 50%;
@@ -8429,7 +8463,9 @@ section[data-area="team"] .left-content .content h2 {
   -o-transform: translate3d(-50%, -50%, 0);
   -ms-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0);
+  background: rgba(0, 0, 0, 0.25);
   text-align: center;
+  color: white;
 }
 section[data-area="team"] .left-content .team-members {
   width: 80%;
@@ -8680,6 +8716,12 @@ section .container {
 .side-panel .close-panel:hover:after {
   background: white;
 }
+@media only screen and (max-width: 763px) {
+  .side-panel .close-panel {
+    right: 0px;
+    top: 15px;
+  }
+}
 .side-panel.is-visible {
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
@@ -8762,7 +8804,7 @@ section .container {
   font-size: 12px;
   text-transform: uppercase;
   text-align: center;
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.2);
 }
 .contact-card .body {
   padding: 30px 30px 30px;
