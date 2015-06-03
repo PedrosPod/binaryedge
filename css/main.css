@@ -9018,9 +9018,10 @@ section .container {
   box-shadow: 0 1px 0 #555555;
 }
 .form-line > textarea {
-  height: 100px;
+  height: 180px;
   margin-top: 30px;
   border-bottom: 0;
+  resize: none;
 }
 .form-line > textarea:focus {
   border: 0;
