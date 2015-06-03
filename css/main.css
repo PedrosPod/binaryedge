@@ -7595,6 +7595,7 @@ section[data-area="landing-page"] .center-wrapper h6 {
   width: auto;
   margin: 30px auto 0;
   padding: 0px 30px;
+  background: rgba(0, 0, 0, 0.65);
   border: 2px solid white;
   position: relative;
   line-height: 38px;
@@ -8265,7 +8266,7 @@ section[data-area="services"] #slide1 .services-entrance p span {
 }
 section[data-area="services"] #slide1 .services-entrance .see-services {
   display: inline-block;
-  margin-left: 15px;
+  margin-top: 15px;
   color: white;
   font-size: 16px;
   padding: 5px 15px;
@@ -8274,6 +8275,7 @@ section[data-area="services"] #slide1 .services-entrance .see-services {
   text-decoration: none;
   background: #5bc0de;
   position: relative;
+  float: left;
   -webkit-border-radius: 2px;
   -webkit-background-clip: padding-box;
   -moz-border-radius: 2px;
@@ -8419,7 +8421,7 @@ section[data-area="team"] .left-content .content {
 }
 section[data-area="team"] .left-content .content h2 {
   padding: 15px;
-  border: 3px solid #e53935;
+  border: 3px solid white;
   width: 30%;
   position: absolute;
   top: 50%;
@@ -8429,6 +8431,8 @@ section[data-area="team"] .left-content .content h2 {
   -o-transform: translate3d(-50%, -50%, 0);
   -ms-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0);
+  color: white;
+  background: rgba(0, 0, 0, 0.45);
   text-align: center;
 }
 section[data-area="team"] .left-content .team-members {
@@ -8762,7 +8766,7 @@ section .container {
   font-size: 12px;
   text-transform: uppercase;
   text-align: center;
-  color: rgba(0, 0, 0, 0.4);
+  color: #bf1c19;
 }
 .contact-card .body {
   padding: 30px 30px 30px;

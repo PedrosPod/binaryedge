@@ -7,7 +7,6 @@ section {
 
     // position
     position: absolute;
-
   }
   .intro {
     position: relative;
@@ -129,7 +128,7 @@ section {
         width: auto;
         margin: 30px auto 0;
         padding: 0px 30px;
-
+        background: rgba(0,0,0,.65);
         border: 2px solid white;
         position: relative;
         line-height: 38px;
@@ -759,7 +758,7 @@ section {
         .see-services
         {
           display: inline-block;
-          margin-left: 15px;
+          margin-top: 15px;
           color: white;
           font-size: 16px;
           padding: 5px 15px;
@@ -768,6 +767,8 @@ section {
           text-decoration: none;
           background: @brand-info;
           position: relative;
+          float: left;
+          
           .border-radius(2px);
           .translate3d(0,-5px,0);
 
@@ -951,12 +952,13 @@ section {
         h2
         {
           padding: 15px;
-          border: 3px solid @red;
+          border: 3px solid white;
           width: 30%;
           position: absolute;
           top: 50%; left: 100%;
           .translate3d(-50%,-50%,0);
-
+          color: white;
+          background: rgba(0,0,0,.45);
           text-align: center;
         }
       }
@@ -1303,7 +1305,7 @@ section {
       font-size: 12px;
       text-transform: uppercase;
       text-align: center;
-      color: rgba(0, 0, 0, .4);
+      color: darken(@red, 13%);
     }
 
   }
