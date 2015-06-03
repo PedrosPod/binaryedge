@@ -787,7 +787,8 @@ section {
         .see-services
         {
           display: inline-block;
-          margin-left: 15px;
+          margin: 15px 0;
+          float: left;
           color: white;
           font-size: 16px;
           padding: 5px 15px;
@@ -1337,7 +1338,7 @@ section {
       font-size: 12px;
       text-transform: uppercase;
       text-align: center;
-      color: rgba(0, 0, 0, .2);
+      color: rgba(255, 255, 255, .75);
     }
 
   }
@@ -1628,9 +1629,14 @@ section {
   }
   > textarea
   {
-    height: 100px;
+    height: 180px;
     margin-top:30px;
     border-bottom: 0;
+    resize: no;
+    @media @mobile
+    {
+      height: 100px;
+    }
     &:focus
     {
       border: 0;

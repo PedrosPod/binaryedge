@@ -7172,7 +7172,8 @@ section[data-area="services"] #slide1 .services-entrance p span {
 }
 section[data-area="services"] #slide1 .services-entrance .see-services {
   display: inline-block;
-  margin-left: 15px;
+  margin: 15px 0;
+  float: left;
   color: white;
   font-size: 16px;
   padding: 5px 15px;
@@ -7677,7 +7678,7 @@ section .container {
   font-size: 12px;
   text-transform: uppercase;
   text-align: center;
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.75);
 }
 .contact-card .body {
   padding: 30px 30px 30px;
@@ -7934,9 +7935,15 @@ section .container {
   box-shadow: 0 1px 0 #555555;
 }
 .form-line > textarea {
-  height: 100px;
+  height: 180px;
   margin-top: 30px;
   border-bottom: 0;
+  resize: no;
+}
+@media only screen and (max-width: 763px) {
+  .form-line > textarea {
+    height: 100px;
+  }
 }
 .form-line > textarea:focus {
   border: 0;
