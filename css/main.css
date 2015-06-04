@@ -7084,11 +7084,11 @@ section[data-area="services"] .slide .section-content .container .more-p p:first
 }
 @media only screen and (max-width: 763px) {
   section[data-area="services"] .slide .section-content .container .more-p p {
-    font-size: 16px;
+    font-size: 14px;
   }
   section[data-area="services"] .slide .section-content .container .more-p p:first-child {
-    font-size: 13px;
-    margin-bottom: 15px;
+    font-size: 14px;
+    margin-bottom: 5px;
   }
 }
 section[data-area="services"] .slide .section-content .container .more-text-fx .intro-p {
