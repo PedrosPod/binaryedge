@@ -55,7 +55,7 @@ function initialize() {
     $('[data-trigger="show-more-text"]').on('click', function(ev){
        ev.preventDefault();
         $(this).toggleClass('is-active');
-        $(this).parent().toggleClass('more-text-fx');
+        $(this).parent().parent().find('.border-left').toggleClass('more-text-fx');
     });
 }();
 
@@ -119,3 +119,14 @@ function initialize() {
     $(".flipback").click(function(){
         $(this).parents(".wrap").removeClass("flipped");});
 }();
+
+
+$(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+
+    //>=, not <=
+    if (scroll >= 500) {
+        //clearHeader, not clearheader - caps H
+        $("header").addClass("is-collapsed");
+    }
+}); //missing );
