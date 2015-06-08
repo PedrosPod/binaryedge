@@ -65,7 +65,7 @@ section, .section {
             top: 0; right: 0; bottom: 0; left: 0;
         }
         .section-bg {
-            background-image: url('../img/bg/landing-bg.jpg');
+            background-image: url('../img/bg/landing-bg-1x.jpg');
             &:before {
                 // box
                 width: 100%;
@@ -214,7 +214,7 @@ section, .section {
     &[data-area="about-us"] {
 
         .section-bg {
-            background-image: url('../img/bg/about-bg.jpg');
+            background-image: url('../img/bg/about-bg-1x.jpg');
             background-size: cover;
         }
 
@@ -462,7 +462,10 @@ section, .section {
                     top: 50%;
                     .translateY(-50%);
 
-                    padding-bottom: 60px;
+                    @media all and (max-width: 1366px)
+                    {
+                        .translateY(-20%);
+                    }
 
                     @media @mobile
                     {
@@ -869,7 +872,7 @@ section, .section {
             }
 
             .section-bg {
-                background-image: url('../img/bg/services-bg.jpg');
+                background-image: url('../img/bg/services-bg-1x.jpg');
                 background-size: cover;
             }
 
@@ -1113,7 +1116,7 @@ section, .section {
         }
 
         .section-bg {
-            background-image: url('../img/bg/team-bg.jpg');
+            background-image: url('../img/bg/team-bg-1x.jpg');
             background-size: cover;
         }
     }
@@ -1409,9 +1412,9 @@ section, .section {
     width: 350px;
     height: 550px;
     position: absolute;
-    left: 50%;
+    right: 150px;
     top: 50%;
-    .translate3d(-50%, -50%, 0);
+    .translate3d(0, -50%, 0);
     z-index: 1;
     margin: 20px;
 
@@ -1436,12 +1439,17 @@ section, .section {
         -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
     }
-
+    @media all and (max-width: 1024px) {
+        right: 100px;
+    }
     @media @mobile
     {
         width: 300px;
         height: 480px;
         margin: 0px 0 0;
+        left: 50%;
+        right: auto;
+        .translate3d(-50%, -50%, 0);
     }
 
 }
@@ -1641,6 +1649,8 @@ section, .section {
   display: block;
   padding: 5px 30px;
   width: 80%;
+    max-width: 300px;
+    float: left;
 
   margin: 30px auto;
 
