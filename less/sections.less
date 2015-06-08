@@ -212,6 +212,7 @@ section, .section {
 
     }
     &[data-area="about-us"] {
+
         .section-bg {
             background-image: url('../img/bg/about-bg.jpg');
             background-size: cover;
@@ -254,36 +255,8 @@ section, .section {
 
             @media @mobile
             {
-                display: none;
-                width: 100%;
-                bottom: auto;
-                height: 40%;
 
-                float: left;
-                .content {
-                    width: 100%;
-                    height: 100%;
-                    padding: 60px 30px 0 100px;
 
-                    position: relative;
-                    top: auto;
-                    left: auto;
-                    .translate3d(0, 0, 0);
-
-                    > p {
-                        width: 100%;
-                        text-align: left;
-                        position: relative;
-                        top: 50%;
-                        .translateY(-50%);
-                    }
-                    .small-logo {
-                        position: absolute;
-                        left: 30px;
-                        top: 50%;
-                        .translateY(-5px);
-                    }
-                }
             }
 
         }
@@ -320,6 +293,11 @@ section, .section {
 
                 }
             }
+          @media all and (max-width: 1280px) {
+            .content {
+              margin-top: 40px;
+            }
+          }
             @media @mobile
             {
                 width: 100%;
@@ -382,8 +360,7 @@ section, .section {
 
             @media @mobile
             {
-                display: block;
-
+                
                 svg {
                     width: 200%;
                     top: auto;
@@ -408,6 +385,62 @@ section, .section {
             }
 
         }
+
+      @media @mobile {
+        min-height: 1000px;
+        .content-wrapper {
+          position: absolute;
+        }
+
+        .left-content,
+        .right-content {
+          position: relative;
+          width: 100%;
+          float: left;
+          display: block;
+        }
+        .left-content {
+          background: #000;
+          padding: 30px 15px;
+          .content {
+            width: 80%;
+            margin: 0 auto;
+            position: relative;
+            top: auto;
+            left: auto;
+            .translate3d(0, 0, 0);
+
+            > p {
+              width: 100%;
+              text-align: left;
+              position: relative;
+              color: @gray;
+              text-transform: lowercase;
+
+
+            }
+            .small-logo {
+              svg {
+                fill : @gray;
+              }
+            }
+          }
+        }
+        .context-bg {
+          background: rgba(255, 255, 255, .85);
+          svg {
+            display: none;
+          }
+        }
+      }
+      @media all and (max-width: 1280px) {
+
+        .context-bg {
+          svg {
+            left: 80%;
+          }
+        }
+      }
     }
     &[data-area="services"] {
         .slide {
@@ -444,21 +477,33 @@ section, .section {
                     }
 
                     .border-right {
-                        padding-right: 120px;
-                        position: relative;
-                        @media @mobile
+                      padding-right: 30px;
+                      position: relative;
+
+                      h2 {
+                        text-align: right;
+                        max-width: 100%;
+                      }
+                        @media all and (max-width: 1280px)
                         {
                             border: 0;
                             padding: 0;
+                          .box-shadow(~"none");
+                          h2 {
+                            padding-left: 0px;
+                            text-align: left;
+                            max-width: 60%;
+                          }
                         }
                     }
                     .border-left {
                         
                         height: 300px;
-
-                        @media @mobile
+                        padding-left: 30px;
+                        .box-shadow(~"inset 1px 0 0 rgba(0,0,0,.05)");
+                      @media all and (max-width: 1280px)
                         {
-
+                            padding: 0 0 0 0px;
                             margin-top: 30px;
                         }
                     }
@@ -467,7 +512,11 @@ section, .section {
                         width: 120px;
                         height: 120px;
                         margin-bottom: 30px;
-                        position: relative;
+                        position: absolute;
+                        top: 0;
+                      right: 0;
+                      .translateY(-120%);
+
                         svg {
                             width: 120px;
                             height: 120px;
@@ -478,19 +527,38 @@ section, .section {
                             }
                         }
 
-                        @media @mobile
+                      @media all and (max-width: 1280px)
                         {
+
                             width: 200px;
                             height: 200px;
                             position: fixed;
                             bottom: 30px;
-                            top: auto;
-                            left: 15px;
-                            .translate3d(0, -50%, 0);
+                            top:0px;
+                            left:-100px;
+                            right: auto; bottom: auto;
+                        .translateY(0);
+
                             svg {
                                 fill: rgba(0, 0, 0, .075);
                             }
                         }
+                      @media @mobile
+                      {
+
+                        width: 200px;
+                        height: 200px;
+                        position: fixed;
+                        bottom: 30px;
+                        top:0px;
+                        right:-100px;
+                        left: auto; bottom: auto;
+                        .translateY(0);
+
+                        svg {
+                          fill: rgba(0, 0, 0, .075);
+                        }
+                      }
                     }
 
                     h2 {
@@ -655,7 +723,7 @@ section, .section {
                     .more-p {
                         position: absolute;
                         top: 0;
-                        .translate3d(-100%,0, 0);
+                        .translate3d(0,-50%, 0);
                         .opacity(0);
                         .transition-long();
 
@@ -684,13 +752,13 @@ section, .section {
                     .more-text-fx {
                         .intro-p {
 
-                            .translate3d(-100%,0, 0);
+                            .translate3d(0,-50%, 0);
                             .opacity(0);
                         }
                         .more-p {
 
                             .opacity(1);
-                            .translate3d(0, 0%, 30px);
+                            .translate3d(0, 0%,0);
                         }
                     }
                 }
@@ -759,9 +827,10 @@ section, .section {
 
                     @media @mobile
                     {
+
                         margin: 0;
                         margin-top: 30px;
-                        display: block;
+                        display: none;
                         float: left;
                         width: 100%;
                     }
@@ -807,12 +876,14 @@ section, .section {
             @media @mobile
             {
                 .services-entrance {
-                    padding: 60px 30px;
+                    padding: 75px 15px 30px;
+                  background-color: rgba(255, 255, 255, .85);
                     h2 {
-                        top: 0;
-                        left: 30px;
+                        top: 15px;
+                        left: 15px;
                         font-size: 18px;
                         padding: 10px;
+                      .translate3d(0,0,0);
                     }
                     p {
                         width: 100%;
@@ -827,6 +898,15 @@ section, .section {
                         }
 
                     }
+                  &:after {
+                    position: absolute;
+                    top: 100%; left: 50%;
+                    .translate3d(-50%,0,0);
+                    margin-top: 60px;
+                    content: 'meet our services';
+                    color: @gray;
+                    font-size: 24px;
+                  }
                 }
 
                 .context-bg {
@@ -1095,7 +1175,7 @@ section, .section {
     @media @mobile
     {
         width: 100%;
-        top: @header-h / 1.5;
+        top: 0;
     }
     h2 {
         font-size: 36px;
@@ -1555,4 +1635,17 @@ section, .section {
             background: @gray-lighter;
         }
     }
+}
+.close-panel-long
+{
+  display: block;
+  padding: 5px 30px;
+  width: 80%;
+
+  margin: 30px auto;
+
+  background: none;
+  border: 2px solid white;
+  color: white;
+
 }
