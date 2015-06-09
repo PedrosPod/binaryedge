@@ -107,6 +107,7 @@ html.fp-enabled,
 
 #fp-nav {
   position: fixed;
+  padding: 15px 0;
   z-index: 100;
   margin-top: -32px;
   top: 50%;
@@ -120,8 +121,11 @@ html.fp-enabled,
 }
 
 #fp-nav.right {
-  right: 30px;
-
+  right: 15px;
+  background: rgba(255,255,255,1);
+  .border-radius(30px);
+  padding: 0;
+  .box-shadow(~"0 0 4px rgba(0,0,0,.12), 0 8px 16px rgba(0,0,0,.28)");
 }
 
 #fp-nav.left {
@@ -133,6 +137,7 @@ html.fp-enabled,
   z-index: 4;
   left: 50%;
   opacity: 1;
+
 }
 
 .fp-slidesNav.bottom {
@@ -207,7 +212,7 @@ html.fp-enabled,
   display: block;
   width: 20px;
   height: 20px;
-  margin: 10px 30px;
+  margin: 10px 5px;
   position: relative;
 }
 
@@ -234,8 +239,8 @@ html.fp-enabled,
   width: 18px;
   margin: -9px 0 0 -9px;
   border-radius: 100%;
-  background: white;
-  border: 2px solid white;
+  background: @brand-info;
+  border: 2px solid @brand-info;
 }
 
 #fp-nav ul li a span,
@@ -246,8 +251,8 @@ html.fp-enabled,
   height: 18px;
   width: 18px;
   border: 0;
-  background: transparent;
-  border: 2px solid white;
+  background: @gray-light;
+  border: 5px solid #fff;
   left: 50%;
   top: 50%;
   margin: -9px 0 0 -9px;
