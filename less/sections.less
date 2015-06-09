@@ -553,7 +553,7 @@ section, .section {
                         height: 200px;
                         position: fixed;
                         bottom: 30px;
-                        top:0px;
+                        top:15px;
                         right:-100px;
                         left: auto; bottom: auto;
                         .translateY(0);
@@ -637,9 +637,8 @@ section, .section {
                         width: 100px;
                         position: absolute;
                         right: 30px; bottom: 30px;
-
                         z-index: 1;
-                        border: 2px solid white;
+                        border: 1px solid white;
                         .transition-long();
                         background: transparent;
 
@@ -698,7 +697,7 @@ section, .section {
                         {
                             display: block;
                             position: absolute;
-                            bottom: 0; left: 50%;
+                            bottom: -50px; left: 50%;
                             .translate3d(-50%, 100%, 0);
                            width: 90%;
 
@@ -779,6 +778,10 @@ section, .section {
                 top: 50%;
                 .translateY(-50%);
 
+                @media all and (max-width: 1366px) {
+                    .translateY(-20%);
+                }
+
                 h2 {
                     padding: 10px;
                     border: 3px solid @red;
@@ -788,9 +791,9 @@ section, .section {
                     color: @red;
                     font-family: @font-headings;
                     position: absolute;
-                    top: -50%;
+                    top:0;
                     left: 15px;
-                    .translate3d(0%, -25%, 0);
+                    .translate3d(0%, -150%, 0);
                 }
                 p {
                     width: 70%;
@@ -880,7 +883,8 @@ section, .section {
             {
                 .services-entrance {
                     padding: 75px 15px 30px;
-                  background-color: rgba(255, 255, 255, .85);
+                    background-color: rgba(255, 255, 255, .85);
+                    .translate3d(0,-50%,0);
                     h2 {
                         top: 15px;
                         left: 15px;
@@ -905,10 +909,17 @@ section, .section {
                     position: absolute;
                     top: 100%; left: 50%;
                     .translate3d(-50%,0,0);
-                    margin-top: 60px;
+                    margin-top: 0px;
                     content: 'meet our services';
-                    color: @gray;
-                    font-size: 24px;
+                    color: white;
+                      text-transform: uppercase;
+                      font-weight: 300;
+                      font-size: 16px;
+                      background: @gray-dark;
+                      width: 100%;
+                      height: 80px;
+                      text-align: center;
+                      line-height: 160px;
                   }
                 }
 
@@ -1658,4 +1669,7 @@ section, .section {
   border: 2px solid white;
   color: white;
 
+}
+p {
+    text-align: justify;
 }
