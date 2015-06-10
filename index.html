@@ -876,27 +876,25 @@
                             </div>
 
                             <div class="body">
-                                <div class="container-fluid">
+                                <div class="container-fluid" id="contact_form">
 
+                                    <div class="form-line">
+                                        <input type="text" name="full-name" id="full-name" placeholder="Full name"/>
+                                    </div>
 
+                                    <div class="form-line">
+                                        <input type="text" name="email" id="email" placeholder="Your email"/>
+                                    </div>
 
-                                       <div class="form-line">
-                                           <input type="text" name="full-name" id="full-name" placeholder="Full name"/>
-                                       </div>
+                                    <div class="form-line">
+                                        <textarea name="your-message" id="your-message" cols="30" rows="10" placeholder="Your message..."></textarea>
+                                    </div>
 
-                                        <div class="form-line">
-                                            <input type="text" name="email" id="email" placeholder="Your email"/>
-                                        </div>
-
-                                        <div class="form-line">
-                                            <textarea name="your-message" id="your-message" cols="30" rows="10" placeholder="Your message..."></textarea>
-                                        </div>
-                                    
-                                        <div class="form-action">
-                                            <button class="btn btn-info btn-block">
-                                                Send message
-                                            </button>
-                                        </div>
+                                    <div class="form-action">
+                                        <button class="btn btn-info btn-block" id="send_message">
+                                            Send message
+                                        </button>
+                                    </div>
 
 
                                 </div>
@@ -979,9 +977,80 @@
             $('header').removeClass('is-collapsed');
         });
 
+        $('#full-name,#email,#your-message').keyup(function() {
+            $('#send_message').removeClass('btn-danger');
+            $('#send_message').html('Send');
+        });
+
+        $("#send_message").on( "click", function() {
+
+            var name = $('#full-name').val();
+            var email = $('#email').val();
+            var message = $('#your-message').val();
+
+            var data = "name="+name+"&email="+email+"&message="+message
+
+            var url = "https://binaryedge.io:1338/"; // the script where you handle the form input.
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: data, // serializes the form's elements.
+                timeout: 2000,
+                cache: false,
+                success: function(data)
+                {
+
+                    console.log(data);
+                    if(data.errors.count == 0){
+                        $('#send_message').html('Email sent. Thank you.');
+
+                        $('#send_message').attr("disabled", true);
+                        $('#full-name').attr("disabled", true);
+                        $('#email').attr("disabled", true);
+                        $('#your-message').attr("disabled", true);
+                    }
+                    else{
+                        $('#send_message').addClass('btn-danger');
+
+                        if(data.errors.hasOwnProperty('email')){
+                            $('#send_message').html('Invalid email.');
+                            return;
+                        }
+
+                        if(data.errors.hasOwnProperty('name')){
+                            $('#send_message').html('Invalid name.');
+                            return;
+                        }
+
+                        if(data.errors.hasOwnProperty('message')){
+                            $('#send_message').html('Invalid message.');
+                            return;
+                        }
+
+                        alert('There is a problem with the contact form, please contact us via info@binaryedge.io')
+                    }
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert('There is a problem with the contact form, please contact us via info@binaryedge.io')
+                }
+            });
+
+            return false; // avoid to execute the actual submit of the form.
+        });
+
     });
 
 
+</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-58215930-1', 'auto');
+    ga('send', 'pageview');
 </script>
 </body>
 </html>
